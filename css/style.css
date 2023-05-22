@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  background-image: url(../img/cristofer-maximilian-YmsrXcDf0J8-unsplash.jpg);
+  background-size: cover;
+}
+.heading-primary {
+  text-align: center;
+  font-size: 5.2rem;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 2.4px;
+  margin: 9.8rem 0 6.8rem 0;
+  color: #38433d;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+.input {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: inherit;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  background-color: #d1d8e0;
+}
+.input::placeholder {
+  color: #38433d;
+}
+.submit-btn,
+.submit-btn:link,
+.submit-btn:visited {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: #000;
+  background-color: #92979d;
+}
+.submit-btn:hover,
+.submit-btn:active {
+  background-color: #38433d;
+  color: #d1d8e0;
+}

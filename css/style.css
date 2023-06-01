@@ -7,22 +7,74 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   background-image: url(../img/cristofer-maximilian-YmsrXcDf0J8-unsplash.jpg);
   background-size: cover;
 }
-.heading-primary {
+
+/* HEADINGS */
+.heading {
   text-align: center;
   font-size: 5.2rem;
   font-weight: 700;
   line-height: 1.8;
   letter-spacing: 2.4px;
-  margin: 9.8rem 0 6.8rem 0;
   color: #38433d;
 }
-.form {
+.temp {
+  font-size: 4.8rem;
+  margin-bottom: -1rem;
+}
+.city {
+  font-size: 3.6rem;
+  margin-bottom: 2.4rem;
+  color: black;
+}
+
+/* ICONS */
+.search-icon {
+  font-size: 3.2rem;
+}
+.weather-icon {
+  width: 12rem;
+  margin-top: 3rem;
+}
+.icon {
+  width: 4.86rem;
+}
+/* PARAGRAPH */
+.paragraph {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 2.4px;
+  color: #38433d;
+}
+.error-paragraph {
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+
+/* HEADER */
+.header {
+  margin-bottom: 1.2rem;
+}
+
+/* Section Weather */
+.section-weather {
+  background-color: #afb4ba3a;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  max-width: 47rem;
+  margin: 10rem auto 0;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  padding: 4rem 3.5rem;
+  text-align: center;
+}
+.search {
   display: flex;
   justify-content: center;
   gap: 1.6rem;
@@ -39,21 +91,53 @@ body {
 .input::placeholder {
   color: #38433d;
 }
-.submit-btn,
-.submit-btn:link,
-.submit-btn:visited {
+.search-btn,
+.search-btn:link,
+.search-btn:visited {
   font-size: 2rem;
   font-weight: 600;
-  padding: 1.6rem 3.2rem;
+  padding: 0.9rem 1.6rem;
   border-radius: 9px;
   border: none;
   cursor: pointer;
   font-family: inherit;
-  color: #000;
   background-color: #92979d;
 }
-.submit-btn:hover,
-.submit-btn:active {
+.search-btn:hover,
+.search-btn:active {
   background-color: #38433d;
   color: #d1d8e0;
+}
+.error {
+  text-align: left;
+  margin: 1rem 0 0 1rem;
+  font-size: 1.4rem;
+  display: none;
+}
+
+.weather {
+  display: none;
+}
+.details {
+  display: flex;
+  gap: 3.6rem;
+}
+.col {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media Queries */
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+  .paragraph,
+  .temp {
+    font-weight: 900;
+    color: #000;
+  }
 }

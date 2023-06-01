@@ -4,8 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
@@ -14,26 +22,52 @@
     />
     <link rel="stylesheet" href="css/style.css" />
 
-    <title>Weather API</title>
+    <title>Weather APP</title>
   </head>
   <body>
-    <header>
-      <h1 class="heading-primary">Weather</h1>
-      <form>
-        <div class="form">
-          <div>
-            <input class="input" type="text" placeholder="Enter a location" />
+    <header class="header">
+      <h1 class="heading">Weather</h1>
+    </header>
+    <section class="section-weather">
+      <div class="search">
+        <input class="input" type="text" placeholder="Enter a location" />
+
+        <button class="search-btn">
+          <ion-icon class="search-icon" name="search-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="error">
+        <p class="error-paragraph">Invalid city name</p>
+      </div>
+
+      <div class="weather">
+        <div class="main-info">
+          <img class="weather-icon" src="/img/icons/rainy.png" />
+          <h2 class="heading temp">22°C</h2>
+          <h3 class="heading city">Berlin</h3>
+        </div>
+
+        <div class="details">
+          <div class="col">
+            <div><img class="icon" src="/img/icons/humidity.png" /></div>
+            <div>
+              <p class="humidity paragraph">20%</p>
+              <p class="paragraph">Humidity</p>
+            </div>
           </div>
 
-          <div>
-            <input class="submit-btn" type="submit" value="Submit" />
+          <div class="col">
+            <div><img class="icon" src="/img/icons/wind.png" /></div>
+            <div>
+              <p class="wind paragraph">10 km/h</p>
+              <p class="paragraph">Wind Speed</p>
+            </div>
           </div>
         </div>
-      </form>
-    </header>
+      </div>
+    </section>
 
-    <div class="weather-information.">
-      <ul class="information-container"></ul>
-    </div>
+    <script src="/script.js"></script>
   </body>
 </html>

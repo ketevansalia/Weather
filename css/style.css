@@ -132,12 +132,16 @@ body {
 /* Media Queries */
 @media (max-width: 59em) {
   html {
-    /* 8px / 16px = 0.5 = 50% */
     font-size: 50%;
   }
   .paragraph,
   .temp {
     font-weight: 900;
     color: #000;
+  }
+}
+@media (max-width: 34em) {
+  body {
+    background-size: 100% 300%;
   }
 }

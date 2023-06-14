@@ -134,6 +134,7 @@ body {
   html {
     font-size: 50%;
   }
+
   .paragraph,
   .temp {
     font-weight: 900;
@@ -142,6 +143,6 @@ body {
 }
 @media (max-width: 34em) {
   body {
-    background-size: 100% 300%;
+    background-size: 200% 500%;
   }
 }

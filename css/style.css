@@ -53,10 +53,6 @@ body {
   letter-spacing: 2.4px;
   color: #38433d;
 }
-.error-paragraph {
-  font-family: inherit;
-  font-size: 1.8rem;
-}
 
 /* HEADER */
 .header {
@@ -112,6 +108,15 @@ body {
   text-align: left;
   margin: 1rem 0 0 1rem;
   font-size: 1.4rem;
+}
+.error-paragraph {
+  font-family: inherit;
+  font-size: 1.8rem;
+  display: none;
+}
+.error-400 {
+  font-family: inherit;
+  font-size: 1.8rem;
   display: none;
 }
 

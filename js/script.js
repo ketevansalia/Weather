@@ -3,19 +3,21 @@ import apiKey from './apiKey.js';
 const apiUrl =
   'https://api.openweathermap.org/data/2.5/weather?units=metric&q=';
 
+// const weatherInfo = function () {};
+
 const searchBox = document.querySelector('.search input');
 const searchBtn = document.querySelector('.search button');
 const weatherIcon = document.querySelector('.weather-icon');
+const errorMessage = document.queryCommandIndeterm('.error');
 
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
   if (response.status === 404) {
-    document.querySelector('.error').style.display = 'block';
+    document.querySelector('.error-paragraph').style.display = 'block';
     document.querySelector('.weather').style.display = 'none';
   } else {
     var data = await response.json();
-
     document.querySelector('.city').innerHTML = data.name;
     document.querySelector('.temp').innerHTML =
       Math.round(data.main.temp) + '°C';
@@ -33,12 +35,16 @@ async function checkWeather(city) {
     } else if (data.weather[0].main === 'Mist') {
       weatherIcon.src = '/img/icons/mist.png';
     }
-
     document.querySelector('.weather').style.display = 'block';
-    document.querySelector('.error').style.display = 'none';
+    document.querySelector('.error-paragraph').style.display = 'none';
   }
 }
 
+// searchBtn.addEventListener('click', () => {
+//   let value = searchBox.value.trim();
+
+//   errorMessage.innerText = value.length === 0 ? document.querySelector('.error-400').style.display = 'none' : ;
+// });
 searchBtn.addEventListener('click', () => {
   checkWeather(searchBox.value);
 });

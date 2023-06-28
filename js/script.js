@@ -40,11 +40,6 @@ async function checkWeather(city) {
   }
 }
 
-// searchBtn.addEventListener('click', () => {
-//   let value = searchBox.value.trim();
-
-//   errorMessage.innerText = value.length === 0 ? document.querySelector('.error-400').style.display = 'none' : ;
-// });
 searchBtn.addEventListener('click', () => {
   checkWeather(searchBox.value);
 });
